@@ -120,6 +120,12 @@ This allows Lambda to reboot the EC2 instance.
 * In alarm actions select **Invoke Lambda Function**
 * Choose your Lambda function.
 
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 142628" src="https://github.com/user-attachments/assets/fd9a9a6d-1b1a-4dd8-b05d-2e71e642e1b4" />
+
+
+
+
 ---
 
 ### 6. Testing the System
@@ -129,6 +135,11 @@ Generate CPU load on EC2:
 ```
 stress --cpu 4 --timeout 300
 ```
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 143250" src="https://github.com/user-attachments/assets/4cdb3c63-a698-4790-aed8-04481c345e6e" />
+
+
+
 
 When CPU crosses the threshold:
 
@@ -147,6 +158,16 @@ CloudWatch → Log Groups → /aws/lambda/ec2-remediations
 ```
 
 This helps track automated remediation actions.
+
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 161312" src="https://github.com/user-attachments/assets/81620d17-3e97-41c2-8c35-1525d50c7ce6" />
+
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 161337" src="https://github.com/user-attachments/assets/5e280dd7-43a4-46cf-935a-9278334f2958" />
+
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 144201" src="https://github.com/user-attachments/assets/264216d7-a33d-405d-b392-d463a36e19e9" />
+
 
 ---
 
