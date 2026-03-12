@@ -27,7 +27,7 @@ This project shows how cloud monitoring and serverless automation can be used to
 
 ## Project Setup Steps
 
-### 1. Launch EC2 Instance
+## 1. Launch EC2 Instance
 
 * Launch an EC2 instance (Amazon Linux)
 * Enable SSH access
@@ -44,7 +44,7 @@ sudo yum install stress -y
 
 ---
 
-### 2. Create CloudWatch Alarm
+## 2. Create CloudWatch Alarm
 
 * Go to **CloudWatch → Alarms → Create Alarm**
 * Select metric: **EC2 → CPUUtilization**
@@ -68,7 +68,7 @@ Evaluation period: 2 minutes
 
 ---
 
-### 3. Create Lambda Function
+## 3. Create Lambda Function
 
 Create a Lambda function with Python runtime.
 
@@ -98,7 +98,7 @@ def lambda_handler(event, context):
 ---<img width="1920" height="1200" alt="Screenshot 2026-03-12 120352" src="https://github.com/user-attachments/assets/daf99bf5-c466-4bef-9dfd-09ac5305c3be" />
 
 
-### 4. Configure IAM Role
+## 4. Configure IAM Role
 
 Attach the required permission to Lambda:
 
@@ -115,7 +115,7 @@ This allows Lambda to reboot the EC2 instance.
 
 ---
 
-### 5. Connect CloudWatch Alarm to Lambda
+## 5. Connect CloudWatch Alarm to Lambda
 
 * In alarm actions select **Invoke Lambda Function**
 * Choose your Lambda function.
@@ -128,7 +128,7 @@ This allows Lambda to reboot the EC2 instance.
 
 ---
 
-### 6. Testing the System
+## 6. Testing the System
 
 Generate CPU load on EC2:
 
@@ -188,5 +188,5 @@ This project demonstrates how AWS monitoring and automation tools can be combine
 
 ## Author
 
-Shreyash Meshram
-DevOps / Cloud Project
+### Shreyash Meshram
+### DevOps / Cloud Project
