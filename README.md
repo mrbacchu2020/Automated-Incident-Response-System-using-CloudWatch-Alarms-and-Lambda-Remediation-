@@ -49,17 +49,22 @@ sudo yum install stress -y
 * Go to **CloudWatch → Alarms → Create Alarm**
 * Select metric: **EC2 → CPUUtilization**
 * Configure threshold:
+```
+CPUUtilization > 70%
+Evaluation period: 2 minutes
+```
+
 * <img width="1920" height="1200" alt="Screenshot 2026-03-12 152649" src="https://github.com/user-attachments/assets/9f93bfe7-89ed-4c02-8e05-a1c42f3e1da7" />
+
 
 <img width="1920" height="1200" alt="Screenshot 2026-03-12 152707" src="https://github.com/user-attachments/assets/947be52f-e407-41f2-85ab-6fbba760873e" />
 
 
 <img width="1920" height="1200" alt="Screenshot 2026-03-12 152723" src="https://github.com/user-attachments/assets/770b433d-a83d-4d95-998a-ccbac45c7396" />
 
-```
-CPUUtilization > 70%
-Evaluation period: 2 minutes
-```
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 121655" src="https://github.com/user-attachments/assets/27838835-fac7-4ba5-b051-70a932cd7ff0" />
+
 
 ---
 
@@ -84,8 +89,14 @@ def lambda_handler(event, context):
 
     print("EC2 instance restarted:", instance_id)
 ```
+<img width="1920" height="1200" alt="project4 17" src="https://github.com/user-attachments/assets/64170ac4-dca8-47fa-9cdd-3ea7ec9aadfd" />
 
----
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 120323" src="https://github.com/user-attachments/assets/38326a21-75b4-4321-a3bc-86cfdcb7e6d7" />
+
+
+
+---<img width="1920" height="1200" alt="Screenshot 2026-03-12 120352" src="https://github.com/user-attachments/assets/daf99bf5-c466-4bef-9dfd-09ac5305c3be" />
+
 
 ### 4. Configure IAM Role
 
@@ -94,8 +105,13 @@ Attach the required permission to Lambda:
 ```
 AmazonEC2FullAccess
 ```
-
 This allows Lambda to reboot the EC2 instance.
+
+<img width="1920" height="1200" alt="Screenshot 2026-03-12 115410" src="https://github.com/user-attachments/assets/29835b50-2171-4516-a7b7-7f30e0a3bca4" />
+
+
+<img width="1884" height="1193" alt="Screenshot 2026-03-12 115523" src="https://github.com/user-attachments/assets/68d33994-dae2-4040-a8d6-74eb0d999335" />
+
 
 ---
 
